@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-enum Section {
-    case main
-}
+// MARK: - HomeViewController
 
 class HomeViewController: UICollectionViewController {
     
-    var datasource: UICollectionViewDiffableDataSource<Section, String>?
     private static let cellID = "CellID"
+    private var datasource: UICollectionViewDiffableDataSource<Section, String>?
     
     // MARK: - Initializers
     
@@ -26,7 +24,7 @@ class HomeViewController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Lifecycle
+    // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +33,11 @@ class HomeViewController: UICollectionViewController {
         createDatasource()
         reloadData()
     }
+}
+
+// MARK: - UICollectionView setup methods
+
+extension HomeViewController {
     
     private static func configureLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { sectionIndex, environment in
@@ -59,23 +62,6 @@ class HomeViewController: UICollectionViewController {
         }
     }
         
-    private func createDatasource() {
-        datasource = UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView) { collectionView, indexPath, threadTitle in
-            let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: Self.cellID, for: indexPath
-            )
-            cell.backgroundColor = .systemBlue
-            return cell
-        }
-    }
-    
-    private func reloadData() {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
-        snapshot.appendSections([Section.main])
-        snapshot.appendItems(["Cars", "Photograph", "Mechanical Keyboards", "Clothing"], toSection: .main)
-        datasource?.apply(snapshot)
-    }
-        
     private func configureCollectionView() {
         navigationItem.title = "Popular Topics"
         collectionView.register(
@@ -93,6 +79,28 @@ class HomeViewController: UICollectionViewController {
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
+    }
+}
+
+// MARK: - DataSource methods
+
+extension HomeViewController {
+    
+    private func createDatasource() {
+        datasource = UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView) { collectionView, indexPath, threadTitle in
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: Self.cellID, for: indexPath
+            )
+            cell.backgroundColor = .systemBlue
+            return cell
+        }
+    }
+    
+    private func reloadData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+        snapshot.appendSections([Section.trending])
+        snapshot.appendItems(["Cars", "Photograph", "Mechanical Keyboards", "Clothing"], toSection: .trending)
+        datasource?.apply(snapshot)
     }
 }
 
@@ -116,6 +124,6 @@ struct ContentView_Previews: PreviewProvider {
 
 struct ContentView: View {
     var body: some View {
-        Text("")
+        Text("discussion-board")
     }
 }

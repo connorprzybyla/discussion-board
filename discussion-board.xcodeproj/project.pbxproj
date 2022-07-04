@@ -16,6 +16,7 @@
 		5A3E835C2872090B0071FE73 /* discussion_boardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E835B2872090B0071FE73 /* discussion_boardTests.swift */; };
 		5A3E83662872090B0071FE73 /* discussion_boardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E83652872090B0071FE73 /* discussion_boardUITests.swift */; };
 		5A3E83682872090B0071FE73 /* discussion_boardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E83672872090B0071FE73 /* discussion_boardUITestsLaunchTests.swift */; };
+		5A3E837F28727E5F0071FE73 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E837E28727E5F0071FE73 /* Section.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5A3E83612872090B0071FE73 /* discussion-boardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "discussion-boardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3E83652872090B0071FE73 /* discussion_boardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discussion_boardUITests.swift; sourceTree = "<group>"; };
 		5A3E83672872090B0071FE73 /* discussion_boardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discussion_boardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A3E837E28727E5F0071FE73 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		5A3E83402872090A0071FE73 /* discussion-board */ = {
 			isa = PBXGroup;
 			children = (
+				5A3E837D28727E4D0071FE73 /* CollectionViewModels */,
 				5A3E83412872090A0071FE73 /* AppDelegate.swift */,
 				5A3E83432872090A0071FE73 /* SceneDelegate.swift */,
 				5A3E83452872090A0071FE73 /* HomeViewController.swift */,
@@ -125,6 +128,14 @@
 				5A3E83672872090B0071FE73 /* discussion_boardUITestsLaunchTests.swift */,
 			);
 			path = "discussion-boardUITests";
+			sourceTree = "<group>";
+		};
+		5A3E837D28727E4D0071FE73 /* CollectionViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5A3E837E28727E5F0071FE73 /* Section.swift */,
+			);
+			path = CollectionViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3E837F28727E5F0071FE73 /* Section.swift in Sources */,
 				5A3E834C2872090A0071FE73 /* discussion_board.xcdatamodeld in Sources */,
 				5A3E83462872090A0071FE73 /* HomeViewController.swift in Sources */,
 				5A3E83422872090A0071FE73 /* AppDelegate.swift in Sources */,
