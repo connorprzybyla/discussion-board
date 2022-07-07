@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "type": "featured",
+    "title": "",
+    "subtitle": "",
+    "items": [
+      {
+        "id": 1,
+        "tagline": "",
+        "name": "NFT",
+        "subtitle": "Explore popular NFT's.",
+      },
+      {
+        "id": 2,
+        "tagline": "",
+        "name": "Mechanical Keyboards",
+        "subtitle": "Hotswap PCB's on standby.",
+      },
+      {
+        "id": 3,
+        "tagline": "Travel",
+        "name": "Ibiza rooftop bars.",
+        "subtitle": "",
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "scrollable",
+    "title": "",
+    "subtitle": "",
+    "items": [
+        {
+          "id": 4,
+          "tagline": "",
+          "name": "Airports",
+          "subtitle": "",
+        },
+        {
+          "id": 5,
+          "tagline": "",
+          "name": "Formula 1",
+          "subtitle": "",
+        },
+        {
+          "id": 6,
+          "tagline": "",
+          "name": "Trucks",
+          "subtitle": "",
+        },
+        {
+          "id": 7,
+          "tagline": "",
+          "name": "LGBTQ",
+          "subtitle": "",
+        },
+        {
+          "id": 8,
+          "tagline": "",
+          "name": "Beauty",
+          "subtitle": "",
+        },
+        {
+          "id": 9,
+          "tagline": "",
+          "name": "Battlestations",
+          "subtitle": "",
+        }
+    ]
+  }
+]
+
