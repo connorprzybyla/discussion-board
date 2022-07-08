@@ -36,7 +36,7 @@ class HomeVC: UICollectionViewController {
     }
 }
 
-// MARK: - UICollectionView setup methods
+// MARK: - UICollectionView Layout
 
 extension HomeVC {
     
@@ -91,7 +91,7 @@ extension HomeVC {
     }
 }
 
-// MARK: - DataSource methods
+// MARK: - DataSource
 
 extension HomeVC {
     
@@ -123,6 +123,16 @@ extension HomeVC {
             snapshot.appendItems(section.items, toSection: section)
         }
         datasource?.apply(snapshot)
+    }
+}
+
+// MARK: UICollectionViewDelegate
+
+extension HomeVC {
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let threadVC = ThreadVC()
+        navigationController?.pushViewController(threadVC, animated: false)
     }
 }
 
