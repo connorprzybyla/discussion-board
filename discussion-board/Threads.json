@@ -10,18 +10,40 @@
         "tagline": "",
         "name": "NFT",
         "subtitle": "Explore popular NFT's.",
+        "comments": [
+            {
+              "id": 1,
+              "author": "connorprz",
+              "description": "Are you sure this is the right one to invest in?",
+              "likes": 100,
+            },
+            {
+              "id": 2,
+              "author": "johndoe",
+              "description": "I'd rather purchase Bored Ape.",
+              "likes": 50,
+            },
+            {
+              "id": 3,
+              "author": "olviaaa",
+              "description": "Agreed 100p.",
+              "likes": 20,
+            }
+        ]
       },
       {
         "id": 2,
         "tagline": "",
         "name": "Mechanical Keyboards",
         "subtitle": "Hotswap PCB's on standby.",
+        "comments": []
       },
       {
         "id": 3,
         "tagline": "Travel",
         "name": "Ibiza rooftop bars.",
         "subtitle": "",
+        "comments": []
       }
     ]
   },
@@ -36,36 +58,42 @@
           "tagline": "",
           "name": "Airports",
           "subtitle": "",
+          "comments": []
         },
         {
           "id": 5,
           "tagline": "",
           "name": "Formula 1",
           "subtitle": "",
+          "comments": []
         },
         {
           "id": 6,
           "tagline": "",
           "name": "Trucks",
           "subtitle": "",
+          "comments": []
         },
         {
           "id": 7,
           "tagline": "",
           "name": "LGBTQ",
           "subtitle": "",
+          "comments": []
         },
         {
           "id": 8,
           "tagline": "",
           "name": "Beauty",
           "subtitle": "",
+          "comments": []
         },
         {
           "id": 9,
           "tagline": "",
           "name": "Battlestations",
           "subtitle": "",
+          "comments": []
         }
     ]
   }

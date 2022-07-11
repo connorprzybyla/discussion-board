@@ -131,7 +131,10 @@ extension HomeVC {
 extension HomeVC {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let threadVC = ThreadVC()
+        let threadVC = ThreadVC(
+            threadTitle: self.sections[indexPath.section].items[indexPath.row].name,
+            comments: self.sections[indexPath.section].items[indexPath.row].comments
+        )
         navigationController?.pushViewController(threadVC, animated: false)
     }
 }

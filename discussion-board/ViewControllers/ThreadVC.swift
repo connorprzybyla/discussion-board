@@ -9,17 +9,19 @@ import UIKit
 
 class ThreadVC: UIViewController {
     
-    // MARK: UIView
-    
-    private let stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        return stackView
-    }()
+    private let threadTitle: String
+    private let comments: [Comment]
+    private static let cellID = "CellID"
+    private let tableView = UITableView()
     
     // MARK: - Initializers
     
-    init() {
+    init(
+        threadTitle: String,
+        comments: [Comment]
+    ) {
+        self.threadTitle = threadTitle
+        self.comments = comments
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,14 +32,11 @@ class ThreadVC: UIViewController {
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        let label = UILabel()
-        label.text = "Welcome User!"
-        stackView.addArrangedSubview(label)
-        view.addSubview(stackView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Self.cellID)
+        tableView.dataSource = self
+        view.addSubview(tableView)
         setupAutoLayout()
     }
-    
-
 }
 
 // MARK: Auto Layout
@@ -45,12 +44,25 @@ class ThreadVC: UIViewController {
 extension ThreadVC {
     
     private func setupAutoLayout() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+    }
+}
+
+extension ThreadVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return comments.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Self.cellID, for: indexPath)
+        cell.textLabel?.text = comments[indexPath.row].description
+        cell.indentationLevel = indexPath.row
+        return cell
     }
 }

@@ -12,4 +12,5 @@ struct Thread: Decodable, Hashable {
     let tagline: String
     let name: String
     let subtitle: String
+    let comments: [Comment]
 }
