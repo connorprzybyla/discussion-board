@@ -61,10 +61,31 @@ extension HomeVC {
                 section.orthogonalScrollingBehavior = .groupPagingCentered
                 
                 return section
+            } else if sectionIndex == 1 {
+                let configuration = UICollectionLayoutListConfiguration(
+                    appearance: .insetGrouped
+                )
+                return NSCollectionLayoutSection.list(
+                    using: configuration,
+                    layoutEnvironment: environment
+                )
             }
             
-            let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-            return NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: environment)
+            let item = NSCollectionLayoutItem(layoutSize: .init(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1))
+            )
+            item.contentInsets = NSDirectionalEdgeInsets(
+                top: 0, leading: 20, bottom: 4, trailing: 20
+            )
+            
+            let group = NSCollectionLayoutGroup.horizontal(
+                layoutSize: .init(widthDimension: .fractionalWidth(1.0),
+                                  heightDimension: .estimated(200)),
+                subitems: [item]
+            )
+            let section = NSCollectionLayoutSection(group: group)
+            return section
         }
     }
         
@@ -75,6 +96,9 @@ extension HomeVC {
         )
         collectionView.register(
             FeaturedCell.self, forCellWithReuseIdentifier: FeaturedCell.reuseIdentifier
+        )
+        collectionView.register(
+            NormalCollectionViewCell.self, forCellWithReuseIdentifier: NormalCollectionViewCell.reuseIdentifier
         )
         createDatasource()
         reloadData()
@@ -100,10 +124,10 @@ extension HomeVC {
             switch self.sections[indexPath.section].type {
             case "list":
                 return self.configure(ListCell.self, with: thread, for: indexPath)
-            case "trending":
+            case "featured":
                 return self.configure(FeaturedCell.self, with: thread, for: indexPath)
             default:
-                return self.configure(ListCell.self, with: thread, for: indexPath)
+                return self.configure(NormalCollectionViewCell.self, with: thread, for: indexPath)
             }
         }
     }

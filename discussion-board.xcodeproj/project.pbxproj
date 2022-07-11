@@ -27,6 +27,7 @@
 		5A4DEA6828766B23000E9C4A /* DecodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DEA6728766B23000E9C4A /* DecodeHelper.swift */; };
 		5AE4B5132877DFCB004C8F91 /* ThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4B5122877DFCB004C8F91 /* ThreadVC.swift */; };
 		5AE710C0287BCE81005766FA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE710BF287BCE81005766FA /* Comment.swift */; };
+		5AE710C2287C9133005766FA /* NormalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE710C1287C9133005766FA /* NormalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		5A4DEA6728766B23000E9C4A /* DecodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeHelper.swift; sourceTree = "<group>"; };
 		5AE4B5122877DFCB004C8F91 /* ThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadVC.swift; sourceTree = "<group>"; };
 		5AE710BF287BCE81005766FA /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5AE710C1287C9133005766FA /* NormalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				5A4DEA5A28766434000E9C4A /* FeaturedCell.swift */,
 				5A4DEA6428766979000E9C4A /* ListCell.swift */,
+				5AE710C1287C9133005766FA /* NormalCollectionViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				5A3E83462872090A0071FE73 /* HomeVC.swift in Sources */,
 				5AE4B5132877DFCB004C8F91 /* ThreadVC.swift in Sources */,
 				5A3E83852872853E0071FE73 /* NetworkingError.swift in Sources */,
+				5AE710C2287C9133005766FA /* NormalCollectionViewCell.swift in Sources */,
 				5A4DEA6828766B23000E9C4A /* DecodeHelper.swift in Sources */,
 				5A3E83422872090A0071FE73 /* AppDelegate.swift in Sources */,
 				5A4DEA6528766979000E9C4A /* ListCell.swift in Sources */,

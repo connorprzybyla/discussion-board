@@ -1,14 +1,14 @@
 //
-//  FeaturedCell.swift
+//  NormalCollectionViewCell.swift
 //  discussion-board
 //
-//  Created by Connor Przybyla on 7/6/22.
+//  Created by Connor Przybyla on 7/11/22.
 //
 
 import UIKit
 
-class FeaturedCell: UICollectionViewCell, SelfConfiguringCell {
-    static let reuseIdentifier = "FeaturedCell"
+class NormalCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
+    static let reuseIdentifier = "NormalCollectionViewCell"
     
     private let stackView: UIStackView = {
         let stackView = UIStackView()

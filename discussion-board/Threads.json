@@ -49,7 +49,7 @@
   },
   {
     "id": 2,
-    "type": "scrollable",
+    "type": "list",
     "title": "",
     "subtitle": "",
     "items": [
@@ -96,6 +96,34 @@
           "comments": []
         }
     ]
+  },
+  {
+    "id": 3,
+    "type": "normal",
+    "title": "",
+    "subtitle": "",
+    "items": [
+        {
+          "id": 10,
+          "tagline": "",
+          "name": "Film Cameras",
+          "subtitle": "",
+          "comments": []
+        },
+        {
+          "id": 11,
+          "tagline": "",
+          "name": "Motocross",
+          "subtitle": "",
+          "comments": []
+        },
+        {
+          "id": 12,
+          "tagline": "",
+          "name": "Nascar",
+          "subtitle": "",
+          "comments": []
+        }
+    ]
   }
 ]
-
