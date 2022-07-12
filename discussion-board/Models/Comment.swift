@@ -12,4 +12,6 @@ struct Comment: Decodable, Hashable {
     let author: String
     let description: String
     let likes: Int
+    let replyTo: Int
+    let comments: [Comment]
 }

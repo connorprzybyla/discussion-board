@@ -98,7 +98,7 @@ extension HomeVC {
             FeaturedCell.self, forCellWithReuseIdentifier: FeaturedCell.reuseIdentifier
         )
         collectionView.register(
-            NormalCollectionViewCell.self, forCellWithReuseIdentifier: NormalCollectionViewCell.reuseIdentifier
+            ThreadCollectionViewCell.self, forCellWithReuseIdentifier: ThreadCollectionViewCell.reuseIdentifier
         )
         createDatasource()
         reloadData()
@@ -127,7 +127,7 @@ extension HomeVC {
             case "featured":
                 return self.configure(FeaturedCell.self, with: thread, for: indexPath)
             default:
-                return self.configure(NormalCollectionViewCell.self, with: thread, for: indexPath)
+                return self.configure(ThreadCollectionViewCell.self, with: thread, for: indexPath)
             }
         }
     }

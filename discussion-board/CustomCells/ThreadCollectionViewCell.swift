@@ -1,5 +1,5 @@
 //
-//  NormalCollectionViewCell.swift
+//  ThreadCollectionViewCell.swift
 //  discussion-board
 //
 //  Created by Connor Przybyla on 7/11/22.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class NormalCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
-    static let reuseIdentifier = "NormalCollectionViewCell"
+class ThreadCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
+    static let reuseIdentifier = "ThreadCollectionViewCell"
     
     private let stackView: UIStackView = {
         let stackView = UIStackView()
