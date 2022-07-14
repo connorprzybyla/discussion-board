@@ -58,14 +58,23 @@
             {
               "id": 2,
               "author": "johndoe",
-              "description": "I'd rather purchase Bored Ape.",
+              "description": "I'd rather purchase a Bored Ape.",
               "likes": 50,
               "replyTo": 1,
-              "comments": []
+              "comments": [
+                  {
+                      "id": 11111,
+                      "author": "xavierloo",
+                      "description": "Too expensive right now, wait for the drop.",
+                      "likes": 2,
+                      "replyTo": 1,
+                      "comments": []
+                  }
+              ]
             },
             {
-              "id": 3,
-              "author": "olviaaa",
+                "id": 3,
+                "author": "olviaaa",
               "description": "cryptopunks are the move though",
               "likes": 20,
               "replyTo": 1,

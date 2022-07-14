@@ -31,8 +31,6 @@ class HomeVC: UICollectionViewController {
         super.viewDidLoad()
         configureCollectionView()
         configureAutoLayout()
-        createDatasource()
-        reloadData()
     }
 }
 
