@@ -12,22 +12,73 @@
         "subtitle": "Explore popular NFT's.",
         "comments": [
             {
-              "id": 1,
+              "id": 111,
               "author": "connorprz",
               "description": "Are you sure this is the right one to invest in?",
               "likes": 100,
+              "replyTo": 1,
+              "comments": [
+                  {
+                      "id": 11,
+                      "author": "johndoe",
+                      "description": "Yes, I have good faith.",
+                      "likes": 2,
+                      "replyTo": 1,
+                      "comments": [
+                          {
+                              "id": 1111,
+                              "author": "connorprz",
+                              "description": "lol okaay.",
+                              "likes": 2,
+                              "replyTo": 1,
+                              "comments": [
+                                  {
+                                      "id": 11111,
+                                      "author": "johndoe",
+                                      "description": "No seriously.",
+                                      "likes": 2,
+                                      "replyTo": 1,
+                                      "comments": [
+                                          {
+                                              "id": 111111,
+                                              "author": "connorprz",
+                                              "description": "hahah",
+                                              "likes": 2,
+                                              "replyTo": 1,
+                                              "comments": []
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
             },
             {
               "id": 2,
               "author": "johndoe",
-              "description": "I'd rather purchase Bored Ape.",
+              "description": "I'd rather purchase a Bored Ape.",
               "likes": 50,
+              "replyTo": 1,
+              "comments": [
+                  {
+                      "id": 11111,
+                      "author": "xavierloo",
+                      "description": "Too expensive right now, wait for the drop.",
+                      "likes": 2,
+                      "replyTo": 1,
+                      "comments": []
+                  }
+              ]
             },
             {
-              "id": 3,
-              "author": "olviaaa",
-              "description": "Agreed 100p.",
+                "id": 3,
+                "author": "olviaaa",
+              "description": "cryptopunks are the move though",
               "likes": 20,
+              "replyTo": 1,
+              "comments": []
             }
         ]
       },
