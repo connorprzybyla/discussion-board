@@ -63,10 +63,23 @@ extension HomeVC {
                 let configuration = UICollectionLayoutListConfiguration(
                     appearance: .insetGrouped
                 )
-                return NSCollectionLayoutSection.list(
+                let layoutSection = NSCollectionLayoutSection.list(
                     using: configuration,
                     layoutEnvironment: environment
                 )
+
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.93),
+                    heightDimension: .estimated(80)
+                )
+                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: layoutSectionHeaderSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top
+                )
+                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
+              
+                return layoutSection
             }
             
             let item = NSCollectionLayoutItem(layoutSize: .init(
@@ -96,7 +109,12 @@ extension HomeVC {
             FeaturedCell.self, forCellWithReuseIdentifier: FeaturedCell.reuseIdentifier
         )
         collectionView.register(
-            ThreadCollectionViewCell.self, forCellWithReuseIdentifier: ThreadCollectionViewCell.reuseIdentifier
+            ThreadCell.self, forCellWithReuseIdentifier: ThreadCell.reuseIdentifier
+        )
+        collectionView.register(
+            ListSectionHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: ListSectionHeader.reuseIdentifier
         )
         createDatasource()
         reloadData()
@@ -125,8 +143,22 @@ extension HomeVC {
             case "featured":
                 return self.configure(FeaturedCell.self, with: thread, for: indexPath)
             default:
-                return self.configure(ThreadCollectionViewCell.self, with: thread, for: indexPath)
+                return self.configure(ThreadCell.self, with: thread, for: indexPath)
             }
+        }
+        
+        datasource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ListSectionHeader.reuseIdentifier, for: indexPath) as? ListSectionHeader else { return nil }
+            
+            guard let firstThread = self?.datasource?.itemIdentifier(for: indexPath) else { return nil }
+            
+            guard let section = self?.datasource?.snapshot().sectionIdentifier(containingItem: firstThread) else { return nil }
+            
+            guard !section.title.isEmpty else { return nil }
+            
+            sectionHeader.title.text = section.title
+            sectionHeader.subtitle.text = section.subtitle
+            return sectionHeader
         }
     }
     
